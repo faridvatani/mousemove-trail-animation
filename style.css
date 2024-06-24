@@ -23,13 +23,27 @@ nav {
   display: flex;
   padding: 2.5em;
   justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(100px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 10;
 }
 
 nav a {
   font-size: 13px;
-  color: #dad7cd;
+  color: #c5b6af;
   text-decoration: none;
   text-transform: uppercase;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #f18f01;
+}
+
+nav h1 {
+  font-size: 20px;
+  color: #c5b6af;
 }
 
 .blocks-container {
@@ -46,21 +60,24 @@ nav a {
   height: 100vh;
   background-color: #131313;
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-content: flex-start;
   overflow: hidden;
-  z-index: 10;
 }
 
 .block {
   width: 50px;
   height: 50px;
-  border: 0.5px solid rgba(#255, #255, #255, 0.075);
-  transition: border-color 0.3s ease;
+  border: 0.5px solid rgba(255, 255, 255, 0.08);
+  transition: border-color 1s ease-out;
 }
 
 .highlight {
-  border-color: #ebfb1d;
+  border-color: #f18f01;
+  background: #f18f01;
+  transition: all 0.5s ease;
+  opacity: 0.75;
 }
 
 .content {
@@ -68,8 +85,6 @@ nav a {
   width: 100%;
   height: 100%;
   padding: 2em;
-  pointer-events: none;
-  z-index: 2;
 }
 
 .images {
@@ -90,9 +105,9 @@ nav a {
 .img {
   width: 100%;
   height: 300px;
-  border: 1px solid #dad7cd;
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
   padding: 10px;
   margin-bottom: 10em;
+  border: 1px solid #c5b6af;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
 }
